@@ -1,7 +1,7 @@
 <?php
 	define("__HOST__", "localhost");
-	define("__USER__", "");
-	define("__PASS__", "");
+	define("__USER__", "root");
+	define("__PASS__", "meAxel9@4!");
 	define("__BASE__", "project");
 
 	class DB {
