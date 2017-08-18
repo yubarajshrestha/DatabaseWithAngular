@@ -26,13 +26,13 @@
 	</form>
 
 	<br>
-	<input type="search" ng-model="query" placeholder="Search Blog" class="form-control">
+	<input type="search" ng-model="query.title" placeholder="Search Blog" class="form-control">
 	<br>
 	<table class="table table-striped">
 	 	<tr>
-	 		<th>Title</th><th>Description</th><th>Added</th><th>Remove</th>
+	 		<th>Title</th><th>Description</th><th style="width: 150px;">Added</th><th>Remove</th>
 	 	</tr>
-	 	<tr ng-repeat="blog in blogs | filter: query">
+	 	<tr ng-repeat="blog in blogs | filter: query track by $index">
 	 		<td>{{ blog.title }}</td><td>{{ blog.description }}</td><td>{{ blog.added_date }}</td><td><button class="btn btn-danger" ng-click="removeData(blog.id)">x</button></td>
 	 	</tr>
 	</table>

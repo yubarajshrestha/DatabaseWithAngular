@@ -10,6 +10,7 @@ angular.module('controller', [])
     $http.get('./js/popData.php')
         .success(function(data) {
             $scope.blogs = data;
+            console.log(data);
         })
         .error(function(err) {
             $log.error(err);

@@ -1,5 +1,5 @@
 <?php
-	define("__HOST__", "localhost");
+	define("__HOST__", "127.0.0.1");
 	define("__USER__", "");
 	define("__PASS__", "");
 	define("__BASE__", "project");
@@ -26,7 +26,6 @@
 			} else {
 				$this->data[] = null;
 			}
-			$this->con->close();
 		}
 
 		public function qryFire($sql=null) {
