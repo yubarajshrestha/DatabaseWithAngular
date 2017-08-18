@@ -1,7 +1,7 @@
 <?php
 	define("__HOST__", "127.0.0.1");
-	define("__USER__", "");
-	define("__PASS__", "");
+	define("__USER__", "root");
+	define("__PASS__", "root");
 	define("__BASE__", "project");
 
 	class DB {
@@ -29,14 +29,11 @@
 		}
 
 		public function qryFire($sql=null) {
-			if($sql == null) {
-				$this->qryPop();
-			} else {
-				$this->con->query($sql);
-				$this->qryPop();	
-			}
+			if($sql) $this->con->query($sql);
+			$this->qryPop();
 			$this->con->close();
 			return $this->data;
 		}
 	}
+	
 ?>
