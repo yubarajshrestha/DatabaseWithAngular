@@ -11,8 +11,8 @@
 		public function __construct() {
 			$this->con = new mysqli(__HOST__, __USER__, __PASS__, __BASE__);
 			
-			if(mysqli_connect_errno()) {
-				die("DB connection failed:" . mysqli_connect_error());
+			if($this->con->connect_error) {
+				die("DB connection failed:" . $con->connect_error);
 			}
 		}
 
